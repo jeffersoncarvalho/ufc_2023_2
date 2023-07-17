@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            color: red;
+        }
+
+        #vava {
+            color: blue;
+        }
+
+        .artigo-de-jogo {
+            background-color: beige;
+        }
+
+        .artigo-moba {
+            color: aqua;
+        }
+        #vava, #lol{
+            background-color: darkorange;
+        }
+
+
+        /* div h2 para atingir todos os h2 que estão dentro de qualquer div */
+        /* .teste h2 para atingir todos os h2 que estão dentro de qualquer elemento com classe teste*/
+        /* div.teste para atingir todos os h2 que estão dentro de dib com classe teste */
+        .teste h2{
+            color:bisque;
+        }
+
+        .teste > h2 {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogos online</h1>
+    <article class="artigo-de-jogo artigo-fps">
+        <h2 id="vava">Valorant</h2>
+        <p>Valorante é muito show.</p>
+    </article>
+
+    <article class="artigo-de-jogo artigo-moba">
+        <h2 id="lol">LoL</h2>
+        <p>É um jogo pessoal tem preconceito.</p>
+    </article>    
+
+    <article class="artigo-de-jogo">
+        <h2>DOTA</h2>
+        <p>É o pessoal que tem preconceito com LOL</p>
+    </article>
+
+    <article class="artigo-de-jogo">
+        <h2>World of Warcraft</h2>
+        <p>Melhor jogo do mundo.</p>
+    </article>
+
+    <h1>Memes</h1>
+    <article>
+        <h2>Luva de pedreiro</h2>
+        <p>Receba.</p>
+    </article>
+
+    <article>
+        <h2>Caneta azul</h2>
+        <p>Azul caneta</p>
+    </article>
+    
+    <div class="teste">
+        <h2>Olá!</h2>
+        <div>
+            <h2>Testee!!</h2>
+        </div>
+    </div>
+
+
+</body>
+</html>

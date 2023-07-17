@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .galeria .card {
+            width: 300px;
+            background-color: coral;
+            margin: 20px;
+        }
+
+        .galeria .card .titulo{
+            padding: 20px;
+            font-size: 28px;
+        }
+
+        .galeria .card .corpo {
+            padding: 20px;
+            background-color: rgb(248, 192, 171);
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="galeria">
+        <div class="card">
+            <div class="titulo">Título</div>
+            <div class="corpo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit
+            </div>
+        </div>
+    </div>
+
+    <form id="formulario">
+        Título: <input id="titulo-todo" type="text">
+        <br>
+        Todo: <input id="corpo-todo" type="">
+        <br>
+        <input id="submit-form" type="submit" value="Enviar">
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        
+        let galeria = document.querySelector(".galeria");
+        let formulario = document.getElementById("formulario");
+        let input_titulo = document.getElementById("titulo-todo");
+        let input_todo = document.getElementById("corpo-todo");
+        let submit = document.getElementById("submit-form");
+
+        function enviar_formulario(event){
+            event.preventDefault();
+            let titulo = input_titulo.value;
+            let corpo = input_todo.value;
+            axios({
+                method: "POST",
+                url:"https://62cc3547a080052930a7709b.mockapi.io/todo",
+                data:{
+                    titulo: titulo,
+                    corpo: corpo,
+                }
+            }).then(
+                function(response){
+                    console.log(response);
+                    atualizar_pagina();
+                }
+            ).catch(
+                function(error){
+                    console.log(error);
+                }
+            )
+        }
+
+        submit.addEventListener("click", enviar_formulario);
+
+        function criarCards(todos){
+            galeria.innerHTML = "";
+            for(let todo of todos){
+                let div_card = document.createElement("div");
+                div_card.className = "card";
+            
+                let div_titulo = document.createElement("div");
+                div_titulo.className = "titulo";
+                let text_titulo = document.createTextNode(todo.titulo);
+
+                div_titulo.appendChild(text_titulo);
+                div_card.appendChild(div_titulo);
+                galeria.appendChild(div_card);
+
+                let div_corpo = document.createElement("div");
+                div_corpo.className = "corpo";
+                let text_corpo = document.createTextNode(todo.corpo);
+
+                div_corpo.appendChild(text_corpo);
+                div_card.appendChild(div_corpo);
+                
+            }
+        }
+
+        // let request = async () =>{
+        //     try{
+        //         let response = await axios({
+        //             method: "GET",
+        //             url: "https://62cc3547a080052930a7709b.mockapi.io/todo",
+        //         })
+        //         criarCards(response.data);
+        //     }catch(e){
+        //         console.log(e);
+        //     }
+        // }
+
+        let atualizar_pagina = ()=>{
+            axios({
+                method: "GET",
+                url: "https://62cc3547a080052930a7709b.mockapi.io/todo",
+            }).then(
+                function(response){
+                    // é executada quando a requisição é executada com sucesso
+                    criarCards(response.data);
+                }
+            ).catch(
+                function(error){
+                    // é executada quando a requisição termina com erro
+                    console.log(error);
+                }
+            )
+        }
+
+        atualizar_pagina();
+
+
+    </script>
+    
+</body>
+</html>

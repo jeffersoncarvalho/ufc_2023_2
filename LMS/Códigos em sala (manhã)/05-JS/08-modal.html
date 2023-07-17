@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .overlay{
+            position: fixed;
+            top:0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: none;
+            animation-name: aparecer;
+            animation-duration: 1s;
+
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+        }
+        .overlay.active{
+            display: flex;
+        }
+        /* Keyframe é disparado quando elemento passa de display:none para display:block */
+        @keyframes aparecer {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+
+        .modal-container {
+            background-color: blue;
+            color: white;
+            width: 350px;
+            text-align: center;
+        }
+
+        .modal-container .modal-header {
+            padding: 20px;
+            background-color: rgb(149, 174, 24);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* text-align: left; */
+        }
+
+        .modal-container .modal-header .fechar{
+            cursor: pointer;
+            display: block;
+            padding: 0px 5px;
+        }
+
+        .modal-container .modal-content {
+            padding: 20px;
+        }
+
+        .modal-container .modal-footer {
+            padding: 20px;
+            background-color: rgb(149, 174, 24);
+        }
+    </style>
+</head>
+<body>
+    <button id="abrir-modal">
+        Abrir modal
+    </button>
+    <div class="overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Meu primeiro modal!</h2>
+                <span class="fechar">X</span>
+            </div>
+            <div class="modal-content">
+                O conteúdo!
+            </div>
+            <div class="modal-footer">Copyright LMS</div>
+        </div>
+    </div>
+    <script src="./08-modal.js"></script>
+</body>
+</html>

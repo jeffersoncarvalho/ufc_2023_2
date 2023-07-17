@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        div {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                coluna 1
+            </div>
+            <div class="col">
+                Coluna 2
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Coluna 1
+            </div>
+            <div class="col">
+                Coluna 2
+            </div>
+            <div class="col">
+                Coluna 3
+            </div>
+        </div>
+        <div class="row">
+            <!-- uma coluna com 2 espaços, outra com 7 espaços e um última com 3 espaços -->
+            <div class="col-2">
+                Coluna 1
+            </div>
+            <div class="col-7">
+                Coluna 2
+            </div>
+            <div class="col-3">
+                Coluna 3
+            </div>
+        </div>
+        <div class="row">
+            <!-- Suas colunas onde a segunda tem duas vezes o tamanho da primeira -->
+            <div class="col-4">
+                Coluna 1
+            </div>
+            <div class="col-8">
+                Coluna 2
+            </div>
+        </div>
+        <div class="row">
+            <!-- Três colunas com 2,4,6 espaços respectivamente -->
+            <!-- Mas quando a tela for x small ou small, fazer essas colunas ficarem na vertical -->
+            <div class="col-md-2">
+                Coluna 1
+            </div>
+            <div class="col-md-4">
+                Coluna 2
+            </div>
+            <div class="col-md-6">
+                Coluna 3
+            </div>
+        </div>
+        <div class="row">
+            <!-- Três colunas -->
+            <!-- Quando tela for grande ou maior (>=992px) -> 3,6,3 -->
+            <!-- Quando tela for médio ou maior (<992px e >=768px) -> 2,6,4 -->
+            <!-- Quando tela for menor que médio (<768px) -> empilhado verticalmente -->
+            <div class="col-md-2 col-xl-3">
+                Coluna 1
+            </div>
+            <div class="col-md-6 col-xl-6">
+                Coluna 2
+            </div>
+            <div class="col-md-4 col-xl-4">
+                Coluna 3
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+</body>
+</html>

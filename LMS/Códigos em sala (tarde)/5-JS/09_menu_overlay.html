@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu-overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            left:0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            overflow: hidden;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: width 500ms;
+        }
+
+        .menu-overlay.active{
+            width: 100%;
+        }
+
+        .menu-overlay .menu a {
+            display: block;
+            text-decoration: none;
+            color: rgb(175, 175, 175);
+            font-size: 36px;
+            padding: 12px;
+            transition: color 500ms;
+        }
+
+        .menu-overlay .menu a:hover {
+            color: white;
+        }
+
+        .menu-overlay .fechar{
+            color: white;
+            font-size: 30px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    hcgfcg
+    <button id="abrir-modal">Me clique</button>
+    <div class="menu-overlay">
+        <div class="menu">
+            <a href="">Filmes</a>
+            <a href="">Bitcoin</a>
+            <a href="">Fitness</a>
+            <a href="">Carreira</a>
+        </div>
+        <div class="fechar">X</div>
+    </div>
+    <script>
+        let fechar = document.querySelector(".fechar");
+        let botao_modal = document.querySelector("#abrir-modal");
+        let modal_overlay = document.querySelector(".menu-overlay")
+
+        function abrir_fechar_modal(){
+            modal_overlay.classList.toggle("active");
+        }
+
+        fechar.addEventListener("click", abrir_fechar_modal);
+        botao_modal.addEventListener("click", abrir_fechar_modal);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .layout {
+            height: 800px;
+            display: flex;
+
+        }
+
+        .coluna1 {
+            background-color: blue;
+            width: calc(50% - 100px);
+        }
+
+        .coluna2 {
+            background-color: green;
+            width: calc(50% + 100px);
+        }
+        .exemplo {
+            background-color: pink;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <!-- coluna 1 ocupe 50% - 100px de lagura -->
+        <!-- coluna 2 ocupe 50% + 100px -->
+        <div class="coluna1">C1</div>
+        <div class="coluna2">C2
+            <div class="exemplo">ex</div>
+        </div>
+    </div>
+</body>
+</html>

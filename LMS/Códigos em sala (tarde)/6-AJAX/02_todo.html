@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .galeria{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .card{
+            width: 300px;
+            background-color: rgb(60, 255, 60);
+            margin: 20px;
+        }
+
+        .card .titulo{
+            background-color: rgb(27, 186, 27);
+            padding: 16px;
+            font-size: 24px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card .titulo .fechar {
+            cursor: pointer;
+        }
+
+
+        .card .corpo {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="galeria">
+        <!-- <div class="card">
+            <div class="titulo">
+                <span>Lista de compras</span>
+                <span class="fechar">X</span>
+            </div>
+            <div class="corpo">
+                Whey, creatina, albumina, beta-alanina...
+            </div>
+        </div> -->
+        
+    </div>
+
+    
+    <form action="">
+        Título: <input id="input-titulo" type="text">
+        <br>
+        Corpo: <input id="input-corpo" type="text">  
+        <br>
+        <input id="submit-form" type="submit" value="Enviar">
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+
+        let input_corpo = document.getElementById("input-corpo");
+        let input_titulo = document.getElementById("input-titulo");
+        let submit_form = document.getElementById("submit-form");
+
+        async function submeterFormulario(event){
+            event.preventDefault();
+            let titulo = input_titulo.value;
+            let corpo = input_corpo.value;
+            try{
+                let response = await axios({
+                    method: "POST",
+                    url: "https://62cc3547a080052930a7709b.mockapi.io/todo",
+                    data: {
+                        titulo: titulo,
+                        corpo: corpo
+                    }
+                });
+                console.log(response);
+                request();
+            }catch(e){
+                console.log(e);
+            }
+        }
+
+
+        async function deletarTodo(id){
+            try{
+                let response = await axios({
+                    method: "DELETE",
+                    url:"https://62cc3547a080052930a7709b.mockapi.io/todo/"+id
+                });
+                console.log(response);
+                request();
+            }catch(e){
+                console.log(e);
+            }
+        }
+
+        submit_form.addEventListener("click", submeterFormulario);
+
+        let galeria = document.querySelector(".galeria");
+        function criarCards(todos){
+            galeria.innerHTML = "";
+            for(let todo of todos){
+                let div_card = document.createElement("div");
+                div_card.className = "card";
+                
+                let div_titulo = document.createElement("div");
+                div_titulo.className = "titulo";
+                let span_titulo = document.createElement("span");
+                let texto_titulo = document.createTextNode(todo.titulo);
+                span_titulo.appendChild(texto_titulo);
+                div_titulo.appendChild(span_titulo);
+                div_card.appendChild(div_titulo);
+                
+                let span_fechar = document.createElement("span");
+                span_fechar.className = "fechar";
+                span_fechar.innerHTML = "X";
+                div_titulo.appendChild(span_fechar);
+                span_fechar.addEventListener("click",()=>{deletarTodo(todo.id)});
+                
+                let div_body = document.createElement("div");
+                div_body.className = "corpo";
+                let text_body = document.createTextNode(todo.corpo);
+                div_body.appendChild(text_body);
+                div_card.appendChild(div_body);
+                
+                galeria.appendChild(div_card);
+            }
+            // console.log(galeria.innerHTML);
+        }
+
+        async function request(){
+            try{
+                let response = await axios({
+                    method: "GET",
+                    url: "https://62cc3547a080052930a7709b.mockapi.io/todo"
+                });
+                console.log(response.data);
+                criarCards(response.data);
+            }catch(e){
+                console.log(e);
+            }
+        } 
+    
+        request();        
+    </script>
+
+</body>
+</html>

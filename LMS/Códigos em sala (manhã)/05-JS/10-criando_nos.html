@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container"></div>
+
+    <h3>Coisas que meus alunos tem que tomar na aul</h3>
+    <ul id="lista-suplemento">
+        <li>Café</li>
+        <li>Pré-treino</li>
+        <li>Arrebite</li>
+    </ul>
+    <form action="">
+        Suplemento: <input id="input-sup" type="text">
+        <br>
+        <input id="submit-sup" type="submit" value="Inserir">
+    </form>
+    <script>
+        let container = document.querySelector(".container");
+        let p = document.createElement("p");
+        let texto = document.createTextNode("Fui adicionado dinamicamente");
+
+        p.appendChild(texto);
+        container.appendChild(p);
+
+        let input_sup = document.getElementById("input-sup");
+        let submit_sup = document.getElementById("submit-sup");
+        let ul_sup = document.getElementById("lista-suplemento");
+
+        function capturar_inserir(){
+            event.preventDefault();
+            let suplemento = input_sup.value;
+
+            let li = document.createElement("li");
+            let texto = document.createTextNode(suplemento);
+
+            li.appendChild(texto);
+            ul_sup.appendChild(li);
+        }
+
+        submit_sup.addEventListener("click", capturar_inserir);
+
+    </script>
+</body>
+</html>

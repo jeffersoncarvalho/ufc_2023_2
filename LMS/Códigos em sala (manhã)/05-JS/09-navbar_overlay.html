@@ -1,0 +1,92 @@
+<!-- 1. Projetar overlay completo (tela inteira) -->
+<!-- 2. Fazer 4 botões centralizados e o x no canto direito superior -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 0;
+            overflow: hidden;
+
+            transition: width 700ms;
+        }
+
+        .menu-overlay.active {
+            width: 100%;
+        }
+
+        .menu-overlay .menu .button{
+            color: rgb(183, 183, 183);
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            font-size: 24px;
+            padding: 10px;
+            transition: color 700ms;
+        }
+
+        .menu-overlay .menu .button:hover{
+            color: rgb(255, 255, 255);
+        }
+
+        .menu-overlay .fechar {
+            position: absolute;
+            top: 3%;
+            right: 2%;
+            font-size: 20px;
+            cursor: pointer;
+            display: block;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-overlay">
+        <div class="menu">
+            <a href="" class="button">Filmes</a>
+            <a href="" class="button">Fitness</a>
+            <a href="" class="button">Música</a>
+            <a href="" class="button">Copa do mundo</a>
+        </div>
+        <span class="fechar">X</span>
+    </div>
+
+    <button id="botao-menu">Me clique!</button>
+
+    <script>
+
+        let menu_overlay = document.querySelector(".menu-overlay");
+        function abrir_fechar_menu(){
+            menu_overlay.classList.toggle("active");
+        }
+
+        let botao_menu = document.getElementById("botao-menu");
+        botao_menu.addEventListener("click", abrir_fechar_menu);
+
+        let fechar = document.querySelector(".menu-overlay .fechar");
+        fechar.addEventListener("click", abrir_fechar_menu);
+    </script>
+    
+</body>
+</html>

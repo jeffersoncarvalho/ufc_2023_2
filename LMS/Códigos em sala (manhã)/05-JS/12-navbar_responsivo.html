@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .navbar-responsivo {
+            background-color: black;
+        }
+
+        .navbar-responsivo .menu{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .navbar-responsivo .menu-retratil {
+            display: none;
+        }
+
+        .navbar-responsivo .esquerda{
+            display: flex;
+        }
+
+        .navbar-responsivo .home{
+            background-color: green;
+        }
+
+        .navbar-responsivo a, 
+        .navbar-responsivo .hamburguer{
+            text-decoration: none;
+            display: block;
+            color: white;
+            padding: 14px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .navbar-responsivo .links{
+            display: flex;
+        }
+
+        .navbar-responsivo .hamburguer{
+            display: none;
+        }
+
+        @media screen and (max-width:576px) {
+            .navbar-responsivo .hamburguer{
+                display: block;
+            }
+            .navbar-responsivo .links {
+                display: none;
+            }
+            .navbar-responsivo .menu-retratil.active{
+                display: block;
+            }
+
+            .navbar-responsivo .menu.active {
+                background-color: green;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar-responsivo">
+        <div class="menu">
+            <div class="esquerda">
+                <div class="home">
+                    <a href="">Home</a>
+                </div>
+                <div class="links">
+                    <a href="">News</a>
+                    <a href="">Contact</a>
+                    <a href="">About</a>
+                </div>
+            </div>
+            
+            <div class="hamburguer">&#9776;</div>
+        </div>
+        
+        <div class="menu-retratil">
+            <a href="">News</a>
+            <a href="">Contact</a>
+            <a href="">About</a>
+        </div>
+    </nav>
+    
+    <script>
+        let hamburguer = document.querySelector(".navbar-responsivo .hamburguer");
+        let menu_retratil = document.querySelector(".navbar-responsivo .menu-retratil");
+        let menu = document.querySelector(".navbar-responsivo .menu");
+
+        function alternar_menu_retratil(){
+            menu_retratil.classList.toggle("active");
+            menu.classList.toggle("active");
+        }
+
+        hamburguer.addEventListener("click", alternar_menu_retratil);
+    </script>
+
+</body>
+</html>

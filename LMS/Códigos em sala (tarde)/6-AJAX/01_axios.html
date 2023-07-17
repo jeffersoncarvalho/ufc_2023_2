@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .timeline .card{
+            background-color: beige;
+            margin: 23px auto;
+            width: 500px;
+        }
+
+        .timeline .card .title{
+            background-color: rgb(223, 223, 192);
+            padding: 20px;
+            font-size: 26px;
+        }   
+
+        .timeline .card .body{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="teste">asdasds</button>
+
+    <div class="timeline">
+        <!-- <div class="card">
+            <div class="title">Título!</div>
+            <div class="body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, eaque.</div>
+        </div>     -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>        
+
+        let timeline = document.querySelector(".timeline");
+
+        function createPosts(posts){
+            for(let post of posts){
+                let div_card = document.createElement("div");
+                div_card.classList.add("card");
+
+                let div_titulo = document.createElement("div");
+                div_titulo.classList.add("title");
+                let text_titulo = document.createTextNode(post.title);
+                div_titulo.appendChild(text_titulo);
+                div_card.appendChild(div_titulo);
+
+                let div_body = document.createElement("div");
+                div_body.classList.add("body");
+                let text_body = document.createTextNode(post.body);
+                div_body.appendChild(text_body);
+                div_card.appendChild(div_body);
+
+                timeline.append(div_card);
+            }            
+        }
+
+        let request = async function(){
+            try{
+                let response = await axios({
+                    method:"GET",
+                    url:"https://jsonplaceholder.typicode.com/posts",
+                    data: {nome:"Victor", sobrenome: "Farias"}
+                });
+                createPosts(response.data);
+
+            }catch (e){
+                console.log(e);
+            }
+        }
+        request();
+
+        let button = document.querySelector("#teste");
+
+        button.addEventListener("click", request);
+    </script>
+
+</body>
+</html>

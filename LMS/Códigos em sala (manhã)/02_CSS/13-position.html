@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .teste{
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            border: 5px solid black;
+        }
+        .teste2 {
+            position: relative;
+            top: 50px;
+            left: 100px;
+        }
+
+        .teste3 {
+            position: fixed;
+            right: 0;
+            top: 50px;
+        }
+        .teste4 {
+            position: relative;
+            /* left: 100px; */
+        }
+        .teste5 {
+            width: 150px;
+            height: 150px;
+            background-color: brown;
+            position: absolute;
+            right: 0;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="teste">div teste 1</div>
+    <div class="teste teste2">div teste 2</div>
+    <div class="teste teste3"> div teste 3</div>
+    <div class="teste teste4">
+        <div class="teste5">teste 5</div>
+        Div teste 4
+    </div>
+</body>
+</html>

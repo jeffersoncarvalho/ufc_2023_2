@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .lateral-retratil {
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: black;
+            height: 100%;
+            width: 0px;
+            padding: 0px;
+            overflow: hidden;
+            transition: width 500ms;
+        }
+
+        .lateral-retratil.active{
+            width: 250px;
+        }
+
+        .lateral-retratil a{
+            color: rgb(164, 164, 164);
+            display: block;
+            text-decoration: none;
+            padding: 14px;
+            font-size: 28px;
+            transition: color 500ms;
+        }
+
+        .lateral-retratil .fechar {
+            color: white;
+            font-size: 26px;
+            text-align: right;
+            user-select: none;
+            padding: 20px;
+        }
+
+        .lateral-retratil .fechar span{
+            cursor: pointer;
+        }
+
+        .lateral-retratil a:hover{
+            color: white;
+        }
+
+        .lateral-retratil .overlay{
+            background-color: rgba(0, 0, 0, 0.6);
+            position: fixed;
+            left: 250px;
+            top: 0;
+            height: 100%;
+            width: calc(100% - 250px);
+            display: none;
+        }
+
+        .lateral-retratil.active .overlay{
+            display: block;
+        }
+
+        .container {
+            margin-left: 0px;
+            transition: margin-left 500ms;
+        }
+
+        .container.active{
+            margin-left: 250px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="lateral-retratil">
+        <div class="fechar">
+            <span>X</span> 
+        </div>
+        <a href="">About</a>
+        <a href="">Services</a>
+        <a href="">Clients</a>
+        <a href="">Contact</a>
+        <div class="overlay"></div>
+    </nav>
+    <div class="container">
+        <h1>Meu site só o massa</h1>
+        <button id="abrir-menu">Abrir menu</button>
+    </div>
+
+    <script>
+        let button = document.querySelector("#abrir-menu");
+        let menu = document.querySelector("nav.lateral-retratil");
+        let fechar = document.querySelector(".lateral-retratil .fechar span");
+        let container = document.querySelector(".container");
+
+        function alternar_menu(){
+            menu.classList.toggle("active");
+            container.classList.toggle("active")
+        }
+
+        button.addEventListener("click", alternar_menu);
+        fechar.addEventListener("click", alternar_menu);
+    </script>
+</body>
+</html>

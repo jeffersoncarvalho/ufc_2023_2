@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .dropdown {
+            width: 200px;
+            position: relative;
+        }
+        .dropdown-button {
+            background-color: bisque;
+            text-align: center;
+            padding: 20px 0px;
+            cursor: pointer;
+        }
+        .dropdown-conteudo {
+            background-color: rgb(188, 152, 109);
+            /* height: 200px; */
+            text-align: center;
+            display: none;
+            position: absolute;
+            width: 100%;
+        }
+
+        .dropdown:hover .dropdown-conteudo{
+            display: block;
+        }
+        
+        .dropdown-conteudo a{
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+        }
+        .dropdown-conteudo a:hover {
+            background-color: rgb(153, 105, 47);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <div class="dropdown-button">
+            Passe o mouse aqui
+        </div>
+        <div class="dropdown-conteudo">
+            <a href="">Link 1</a>
+            <a href="">Link 2</a>
+            <a href="">Link 3</a>
+            <a href="">Link 4</a>
+        </div>
+    </div>
+    Funfou?
+</body>
+</html>

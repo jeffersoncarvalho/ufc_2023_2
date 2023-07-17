@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .teste{
+            width: 800px;
+            height: 200px;
+            background-color: blue;
+        }
+        @media screen and (max-width:576px) {
+            .teste{
+                width : 200px;
+                background-color: green;
+            }
+        }
+        @media screen and (min-width:577px) and (max-width:992px){
+            .teste {
+                width: 500px;
+                background-color: pink;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="teste">
+        <!-- Largura 200px quando tela for de celular (largura<=576px) -->
+        <!-- Largura de 500px quando estiver no tablet de pé (576px<largura<=992px) -->
+        <!-- Largura de 800px para dispositivos maiores -->
+    </div>
+</body>
+</html>

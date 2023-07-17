@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes cor {
+            from {
+                background-color: green;
+            }
+            to {
+                background-color: pink;
+            }
+        }
+        .teste {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            animation-name: cor;
+            animation-duration: 5s;
+            animation-iteration-count: 3;
+        }
+
+        @keyframes rodar {
+            from {
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading {
+            width: 150px;
+            height: 150px;
+            /* background-color: green; */
+            border-radius: 50%;
+            border: 40px solid white;
+            border-top: 40px solid green;
+            animation-name: rodar;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes mover {
+            0% {
+                transform: translate(0,0);
+            }
+            30% {
+                transform: translate(200px, 150px);
+            }
+            60%{
+                transform: translate(400px, -200px);
+            }
+            100%{
+                transform: translate(0,0);
+            }
+        }
+        .div1{
+            animation-name: mover;
+            animation-duration: 5s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="teste"></div>
+    <div class="loading"></div>
+    <div class="teste div1"></div>
+    djfnskdfj
+</body>
+</html>

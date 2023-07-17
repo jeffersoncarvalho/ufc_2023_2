@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .botao{
+            width: 60px;
+            height: 45px;
+            background-color: rgba(47, 170, 47, 0.185);
+            cursor: pointer;
+        }
+
+        .teste {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            transition: height 2s, background-color 2s;
+        }
+
+        .active {
+            height: 400px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="foi_clicado()" class="botao">Me aperte!</button>
+
+    <button id="botao2" class="botao">
+        Me clique!
+    </button>
+
+    <button id="botao3" class="botao">
+        Mudar div
+    </button>
+
+    <div class="teste"></div>
+
+    <script src="./05-eventos.js"></script>
+</body>
+</html>

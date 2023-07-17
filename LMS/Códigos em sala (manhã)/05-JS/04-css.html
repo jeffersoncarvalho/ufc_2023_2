@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .teste{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        .teste1 {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="teste"></div>
+    <div id="div2" class="teste"></div>
+    <script>
+        let div_teste = document.querySelector(".teste");
+        div_teste.style.backgroundColor = "green";
+        div_teste.style.width = "400px";
+
+        let div2 = document.querySelector("#div2");
+        // let div2 = document.getElementById("div2"); mesma coisa
+
+        div2.classList.add("teste1");
+        if(div2.classList.contains("teste1")){
+            console.log("Contém teste1");
+        }else{
+            console.log("Não contém teste1");
+        }
+        div2.classList.remove("teste1");
+        
+        // toggle adiciona classse se a classe não existir e remove classe caso ela exista.
+        div2.classList.toggle("teste1");
+
+    </script>
+</body>
+</html>

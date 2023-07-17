@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .accordion {
+            width: 300px;
+            text-align: center;
+        }
+        .accordion .section .titulo {
+            background-color: aqua;
+            padding: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .accordion .section .conteudo {
+            background-color: aquamarine;
+            height: 0px;
+            overflow: hidden;
+        }
+
+        .accordion .section .conteudo.active {
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="accordion">
+        <div class="section">
+            <div class="titulo">Título da seção</div>
+            <div class="conteudo">
+                Conteúdo!1
+            </div>
+        </div>
+        <div class="section">
+            <div class="titulo">Título da seção</div>
+            <div class="conteudo">
+                Conteúdo!1
+            </div>
+        </div>
+    </div>    
+    <script src="./06-acordeon_simples.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .dropdown {
+            width: 200px;
+            text-align: center;
+        }
+        .dropdown .botao{
+            background-color: aqua;
+            padding: 12px;
+            cursor: pointer;
+        }
+
+        .dropdown .menu {
+            background-color: aquamarine;
+            position: absolute;
+            width: 200px;
+            display: none;
+        }
+
+        .dropdown:hover .menu{
+            display: block;
+        }
+
+        .dropdown .menu .link{
+            display: block;
+            text-decoration: none;
+            padding: 12px;
+        }
+
+        .dropdown .menu .link:hover {
+            background-color: rgb(110, 216, 181);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <div class="botao">Meu menu dropdown</div>
+        <div class="menu">
+            <a href="" class="link">Link 1</a>
+            <a href="" class="link">Link 2</a>
+            <a href="" class="link">Link 3</a>
+            <a href="" class="link">Link 4</a>
+        </div>
+    </div>
+    Conteúdo
+</body>
+</html>

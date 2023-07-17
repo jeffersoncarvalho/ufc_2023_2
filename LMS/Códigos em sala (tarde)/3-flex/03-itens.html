@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container, .container2{
+            display: flex;
+        }
+
+        .teste {
+            height: 200px;
+            /* width: 200px; */
+            background-color: rgba(141, 141, 193, 0.481);
+            /* border: 5px solid black; */
+            font-size: 50px;
+        }
+        .div1 {
+            /* order: 10; */
+            flex-basis: 150px;
+            background-color: blue;
+        } 
+        .div2{
+            /* order: -10; */
+            flex-basis: 200px;
+            background-color: brown;
+            flex-grow: 2;
+        }
+        .div3{
+            flex-basis: 100px;
+            background-color: red;
+            flex-grow: 1;
+        }
+        .div4 {
+            flex-basis: 300px;
+            background-color: pink;
+            flex-shrink: 0;
+        }
+        .div5{
+            flex-basis: 400px;
+            background-color: yellow;
+            flex-shrink: 2;
+        }
+        .div6{
+            flex-basis: 500px;
+            background-color: green;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="teste div1">1</div>
+        <div class="teste div2">2</div>
+        <div class="teste div3">3</div>
+        <!-- <div class="teste div4">4</div> -->
+    </div>
+    <div class="container2">
+        <div class="teste div4">4</div>
+        <div class="teste div5">5</div>
+        <div class="teste div6">6</div>
+    </div>
+</body>
+</html>

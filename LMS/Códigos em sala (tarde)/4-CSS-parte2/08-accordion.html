@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .accordion {
+            width: 400px;
+        }
+
+        .accordion .section .titulo {
+            background-color: gray;
+            padding: 15px;
+        }
+
+        .accordion .section .conteudo{
+            background-color: rgb(201, 201, 201);
+            padding: 0px;
+            height: 0px;
+            overflow: hidden;
+            transition: height 500ms, padding 500ms;
+        }
+
+        .accordion .section:hover .conteudo {
+            height: 73.6px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="celula">
+        <div class="accordion">
+            <div class="section">
+                <div class="titulo">Título 1</div>
+                <div class="conteudo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor beatae dicta quod officia perspiciatis, nulla velit quo, aspernatur numquam ad aperiam natus porro? Vitae officiis porro quas quasi laborum nesciunt!</div>
+            </div>
+            <div class="section">
+                <div class="titulo">Título 2</div>
+                <div class="conteudo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, fugiat recusandae? Ipsam eos optio cupiditate quasi recusandae saepe omnis maxime vero consequuntur alias asperiores ipsa dicta animi aliquid, laborum quas.</div>
+            </div>
+            <div class="section">
+                <div class="titulo">Título 3</div>
+                <div class="conteudo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus rem reprehenderit voluptatem possimus impedit soluta officia non eligendi aut ipsum fugit, tempora id sequi, incidunt eveniet quis doloremque. Aliquid, temporibus!</div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

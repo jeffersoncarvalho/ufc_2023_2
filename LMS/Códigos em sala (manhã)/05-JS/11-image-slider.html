@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .image-slider {
+            width: 500px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-slider .slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            position: absolute;
+            transform: translate(500px, 0);
+        }
+
+        .image-slider .slide.active{
+            transform: translate(0, 0);
+        }
+
+        .image-slider .slide.meio-esquerda{
+            animation: meio_esquerda 500ms linear;
+            transform: translate(-500px, 0);
+        }
+
+        @keyframes meio_esquerda {
+            from{
+                transform: translate(0,0);
+            }to{
+                transform: translate(-500px, 0);
+            }
+        }
+
+        .image-slider .slide.direita-meio{
+            animation: direita_meio 500ms linear;
+            transform: translate(0px, 0);
+        }
+
+
+        @keyframes direita_meio {
+            from{
+                transform: translate(500px, 0);
+            }to{
+                transform: translate(0px, 0px);
+            }
+        }
+        
+        .image-slider .slide.meio-direita{
+            animation: meio_direita 500ms linear;
+            transform: translate(500px, 0);
+        }
+
+        @keyframes meio_direita {
+            from{
+                transform: translate(0,0);
+            }to{
+                transform: translate(500px, 0);
+            }
+        }
+
+        .image-slider .slide.esquerda-meio{
+            animation: esquerda-meio 500ms linear;
+            transform: translate(0, 0);
+        }
+
+        @keyframes esquerda-meio {
+            from{
+                transform: translate(-500px,0);
+            }to{
+                transform: translate(0px, 0);
+            }
+        }
+
+
+        .image-slider .seta-esquerda {
+            position: absolute;
+            left:0;
+            top: calc(50% - 28px);
+            color: white;
+            font-size: 40px;
+            padding: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .image-slider .seta-direita {
+            position: absolute;
+            right: 0;
+            padding: 10px;
+            top: calc(50% - 28px);
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .image-slider .indicators {
+            display: flex;
+            justify-content: space-around;
+            width: 160px;
+            padding: 15px;
+        }
+
+        .image-slider .indicators .indicator{
+            background-color: rgb(167, 167, 167);
+            width: 40px;
+            height: 5px;
+        }
+
+        .image-slider .indicators .indicator.active{
+            background-color: white;
+        }
+
+        .image-slider .indicators {
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - 95px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="image-slider">
+        <div class="slide active">SLIDE 1</div>
+        <div class="slide">2</div>
+        <div class="slide">3</div>
+        <div class="seta-esquerda">&lt;</div>
+        <div class="seta-direita">&gt;</div>
+        <div class="indicators">
+            <div class="indicator active"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+        </div>
+    </div>
+    <script>
+        let slides = document.querySelectorAll(".image-slider .slide");
+        let seta_esquerda = document.querySelector(".image-slider .seta-esquerda");
+        let seta_direita = document.querySelector(".image-slider .seta-direita");
+        let indicators = document.querySelectorAll(".image-slider .indicators .indicator");
+
+        let slide_atual = 0;
+
+        function passar_slide_direita(){
+            slides[slide_atual].className = "slide meio-esquerda";
+            indicators[slide_atual].classList.remove("active");
+            slide_atual += 1;
+            // if(slide_atual>=slides.length){
+            //     slide_atual=0;
+            // }
+            slide_atual = slide_atual%slides.length;
+            
+            slides[slide_atual].className = "slide direita-meio";
+            console.log(slide_atual);
+            indicators[slide_atual].classList.add("active");
+        }
+
+        seta_direita.addEventListener("click", passar_slide_direita);
+
+        function voltar_slide(){
+
+            slides[slide_atual].className = "slide meio-direita";
+            
+            indicators[slide_atual].classList.remove("active");
+            slide_atual -= 1;
+            if(slide_atual<0){
+                slide_atual = slides.length-1;
+            }
+            slides[slide_atual].className = "slide esquerda-meio"
+            indicators[slide_atual].classList.add("active");
+
+        }
+
+        seta_esquerda.addEventListener("click", voltar_slide)
+    
+    </script>
+</body>
+</html>

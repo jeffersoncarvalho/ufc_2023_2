@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .galeria .post {
+            width: 500px;
+            background-color: bisque;
+            margin: 30px auto;
+        }
+
+        .galeria .post .title{
+            padding: 16px;
+            font-size: 24px;
+            background-color: rgb(205, 155, 94);
+        }
+
+        .galeria .post .corpo {
+            padding: 26px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="galeria">
+        <!-- <div class="post">
+            <div class="title">Título do post</div>
+            <div class="corpo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita quam qui, minus velit ipsa similique voluptas quia necessitatibus ab accusantium cupiditate, repellendus itaque quisquam illum dolores, enim eaque labore est!</div>
+        </div> -->
+
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+
+        let galeria = document.querySelector(".galeria");
+
+        function criarPosts(posts){
+            // console.log(posts);
+            for(let post of posts){
+                let div_post = document.createElement("div");
+                div_post.classList.add("post");
+
+                // div_post.innerHTML = `
+                // <div class="title">${post.title}</div>
+                // <div class="corpo">${post.body}</div>`;
+
+                let div_title = document.createElement("div");
+                div_title.classList.add("title");
+                let text_title = document.createTextNode(post.title);
+                div_title.append(text_title);
+                div_post.append(div_title);
+
+                let div_corpo = document.createElement("div");
+                div_corpo.classList.add("corpo");
+                let text_corpo = document.createTextNode(post.body);
+                div_corpo.append(text_corpo);
+                div_post.append(div_corpo);
+
+                galeria.append(div_post);
+
+                // let 
+
+            }   
+        }
+            
+        let request = async () =>{
+            try{
+                let response = await axios({
+                            method:"GET",
+                            url:'https://jsonplaceholder.typicode.com/posts'
+                        });
+                criarPosts(response.data);
+            }catch(e){
+                console.log(e);
+            }
+        }
+        request();    
+
+
+    </script>
+</body>
+</html>

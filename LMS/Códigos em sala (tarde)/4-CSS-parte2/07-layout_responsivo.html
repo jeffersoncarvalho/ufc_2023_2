@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .principal, .secundario {
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .secundario {
+            background-color: rgb(27, 223, 223);
+        }
+
+        .principal a, .secundario a {
+            display: block;
+            padding: 7px;
+            text-decoration: none;
+        }
+
+        .principal a:hover, .secundario a:hover{
+            background-color: rgb(85, 161, 161);
+        }
+
+        @media screen and (min-width: 992px) {
+            .secundario {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 20vw;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+            .secundario a {
+                padding: 14px;
+                text-align: center;
+            }
+
+            .principal, .conteudo{
+                margin-left: 20vw;
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- 
+        3 componentes: i) navegador principal, ii) navegador secundário, iii) conteúdo
+        - layout para celular e tablet (largura<992px): navagador principal, navegador secundário e conteúdo empilhados verticalmente
+        - layout para desktop (largura>992p): navegador principal tem que estar móvel em cima, navegador secundária deve ser lateral na esquerda e fixo e conteúdo logo abaixo do navegador principal
+     -->
+
+     <nav class="principal">
+        <a href="">Link</a>
+        <a href="">Link</a>
+        <a href="">Link</a>
+        <a href="">Link</a>
+     </nav>
+     <nav class="secundario">
+        <a href="">Link</a>
+        <a href="">Link</a>
+        <a href="">Link</a>
+        <a href="">Link</a>
+     </nav>
+     <div class="conteudo">Qualquer coisa</div>
+</body>
+</html>

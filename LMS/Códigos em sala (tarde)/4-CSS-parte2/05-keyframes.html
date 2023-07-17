@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .teste {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            animation-name: transformar;
+            animation-duration: 5s;
+            animation-iteration-count: 5;
+        }
+
+        #div1 {
+            position: absolute;
+            left: 50px;
+            width: calc(100% - 100px);
+            border: 1px solid black;
+            background-color: yellow;
+            padding: 5px;
+            text-align: center;
+        }
+
+        @keyframes transformar {
+            0%{
+                background-color: blue;
+            }
+            30%{
+                background-color: green;
+            }
+            70%{
+                background-color: pink;
+            }
+            100%{
+                background-color: blue;
+            }
+        }
+
+        .loading {
+            width: 170px;
+            height: 170px;
+            /* background-color: black; */
+            border-radius: 50%;
+            border: 30px solid transparent;
+            border-top: 30px solid green;
+            animation-name: rodar;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes rodar {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="teste"></div>
+    <div class="loading"></div>
+</body>
+</html>

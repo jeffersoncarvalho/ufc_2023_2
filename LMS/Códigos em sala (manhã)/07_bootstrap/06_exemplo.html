@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+<body>
+    <!-- Site de notícias -->
+    <!-- Navbar -> O nome do site, 3 botões onde 1 deles tem um dropdown -->
+    <!-- Image slider (corousel) com manchetes do dia -->
+    <!-- Galeria de notícias - utilizar o componente card do bootstrap -->
+    <!-- Formulário de inscrição da newsletter -> campo de input para e-mail, um select para o tipo de notícia que se deseja receber e um botão de submit -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">LMS News</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">HTML</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  CSS
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">FLEX</a></li>
+                  <li><a class="dropdown-item" href="#">Grid</a></li>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                  <li><a class="dropdown-item" href="#">Background</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <!-- <img src="..." class="d-block w-100" alt="..."> -->
+            <!-- safdsak -->
+            <h2 class="text-center">Olá mundo</h2>
+          </div>
+          <div class="carousel-item">
+            <h2 class="text-center">Olá mundo 2</h2>
+          </div>
+          <div class="carousel-item">
+            <h2 class="text-center">Olá mundo 3</h2>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="galeria d-flex flex-wrap justify-content-around">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">O campus vai ter internet de 1gb!</h5>
+              <h6 class="card-subtitle mb-2 text-muted">ótimo!</h6>
+              <p class="card-text">No dia 18/11/2022, a internet está sendo instalada ...</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">O campus vai ter internet de 1gb!</h5>
+              <h6 class="card-subtitle mb-2 text-muted">ótimo!</h6>
+              <p class="card-text">No dia 18/11/2022, a internet está sendo instalada ...</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">O campus vai ter internet de 1gb!</h5>
+              <h6 class="card-subtitle mb-2 text-muted">ótimo!</h6>
+              <p class="card-text">No dia 18/11/2022, a internet está sendo instalada ...</p>
+            </div>
+          </div>
+      </div>
+
+      <form action="">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">Tecnologia</option>
+                <option value="2">Negócios</option>
+                <option value="3">Entretenimento</option>
+              </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary mb-3">Enviar</button>
+
+      </form>
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+</body>
+</html>

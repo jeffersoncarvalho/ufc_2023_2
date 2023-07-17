@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .teste {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+        @media screen and (min-width:576px) {
+            .teste {
+                width: 500px;
+                background-color: blue;
+            }
+        }
+
+        @media screen and (min-width:992px) {
+            .teste {
+                width: 800px;
+                background-color: pink;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- div.teste:
+        1. tem largura 200px e cor verde quando a tela tiver largura menor que 576px (celular) 
+        2. tem largura 500px e cor azul quando a tela tiver largura entre 576px e 992 px (tablet)
+        3. tem largura 800px e cor rosa quando a tela tive largura maior que 992px (desktop)
+    -->
+    <div class="teste"></div>
+</body>
+</html>

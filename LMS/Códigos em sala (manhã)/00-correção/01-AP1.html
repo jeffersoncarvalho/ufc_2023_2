@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .menu-superior{
+            background-color: #d1d1d1;
+            display: flex;
+        }
+
+        .menu-superior .botao{
+            text-decoration: none;
+            display: block;
+            padding: 7px;
+            color: black;
+        }
+
+        .menu-superior .botao:hover, .dropdown .dropdown-content .link-drop:hover{
+            background-color: #adadad;
+        }
+
+        .dropdown .dropdown-content{
+            position: absolute;
+            background-color: #d1d1d1;
+            width: 200px;
+            display: none;
+        }
+
+        .dropdown .dropdown-content .link-drop{
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 7px;            
+        }
+
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+
+        .container {
+            height: 1200px;
+            display: flex;
+        }
+
+        
+        .container .conteudo{
+            width: 80vw;
+        }
+        
+        .container .esquerdo{
+            width: 20vw;
+            background-color: gray;
+        }
+        .container .esquerdo .link-esquerdo{
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            padding: 12px;
+        }
+
+        .container .esquerdo .link-esquerdo:hover{
+            background-color: rgb(173, 173, 173);
+        }
+
+        .loading {
+            width: 150px;
+            height: 150px;
+            /* background-color: blue; */
+            border-radius: 50%;
+            border: 30px solid rgba(128, 128, 128, 0.245);
+            border-top: 30px solid blue;
+            animation-name: rodar;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes rodar {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            .container{
+                flex-direction: column;
+            }
+
+            .container .esquerdo{
+                width: 100%;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <nav class="menu-superior">
+        <a class="botao" href="">Link</a>
+        <div class="dropdown">
+            <a class="botao" href="">Link</a>
+            <div class="dropdown-content">
+                <a href="" class="link-drop">Link</a>
+                <a href="" class="link-drop">Link</a>
+                <a href="" class="link-drop">Link</a>
+            </div>
+        </div>
+        <a class="botao" href="">Link</a>
+    </nav>
+
+    <div class="container">
+        <nav class="esquerdo">
+            <a href="" class="link-esquerdo">Link</a>
+            <a href="" class="link-esquerdo">Link</a>
+            <a href="" class="link-esquerdo">Link</a>
+        </nav>
+        <div class="conteudo">
+            <div class="loading"></div>
+        </div>
+    </div>
+</body>
+</html>

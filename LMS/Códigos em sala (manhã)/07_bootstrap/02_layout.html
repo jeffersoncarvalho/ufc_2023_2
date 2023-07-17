@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <style>
+        div{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- container -->
+    <!-- 3 linhas -->
+    <!-- 1a linha: 3 colunas com larguras iguais -->
+    <!-- 2a linha: largura com proporções 4,6,2 -->
+    <!-- 3a linha: Quando for grande ou maior (>=992px), 3,6,3. Quando for menor que isso, empilhar verticalmente -->
+    <div class="container">
+        <div class="row">
+            <div class="col-4">Coluna 1</div>
+            <div class="col-4">Coluna 2</div>
+            <div class="col-4">Coluna 3</div>
+        </div>
+        <div class="row">
+            <div class="col-4">Coluna 1</div>
+            <div class="col-6">Coluna 2</div>
+            <div class="col-2">Coluna 3</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">Coluna 1</div>
+            <div class="col-lg-6">Coluna 2</div>
+            <div class="col-lg-3">Coluna 3</div>
+        </div>
+    </div>
+</body>
+</html>
