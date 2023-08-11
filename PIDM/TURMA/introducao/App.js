@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
+import HelloRN from './components/01HelloRN';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={{fontSize:20,fontWeight:"bold"}}>Jefferson de Carvalho</Text>
-      <StatusBar style="auto" />
+    <View style={estilos.container}>
+      <Text style={estilos.titulo}>Título</Text>
+      <HelloRN />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const estilos = StyleSheet.create({
+
   container: {
     flex: 1,
+    flexDirection: "column",
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end',
   },
+
+  titulo: {
+    fontSize:100,
+    fontWeight: "bold",
+    color: "red"
+  }
+
 });
