@@ -1,11 +1,13 @@
 import { StyleSheet, View, Text } from 'react-native';
 import HelloRN from './components/01HelloRN';
+import HelloRNV1 from './components/02HelloRNV1';
+import Cat from './components/03FullName';
+import Cafe from './components/04Cafe';
 
 export default function App() {
   return (
     <View style={estilos.container}>
-      <Text style={estilos.titulo}>Título</Text>
-      <HelloRN />
+      <Cafe />
     </View>
   );
 }
@@ -16,12 +18,12 @@ const estilos = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     backgroundColor: '#fff',
-    alignItems: 'flex-end',
-    justifyContent: 'flex-end',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   titulo: {
-    fontSize:100,
+    fontSize:50,
     fontWeight: "bold",
     color: "red"
   }
