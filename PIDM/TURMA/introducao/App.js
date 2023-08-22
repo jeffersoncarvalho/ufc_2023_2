@@ -1,13 +1,13 @@
-import { StyleSheet, View, Text } from 'react-native';
-import HelloRN from './components/01HelloRN';
-import HelloRNV1 from './components/02HelloRNV1';
-import Cat from './components/03FullName';
-import Cafe from './components/04Cafe';
+import { StyleSheet, View} from 'react-native';
+//import HelloRN from './components/01HelloRNV1';
+//import HelloRNV2 from './components/02HelloRNV2';
+//import MyCat from './components/03MyCat';
+import MyCat from './components/04MyCat';
 
 export default function App() {
   return (
     <View style={estilos.container}>
-      <Cafe />
+      <MyCat />
     </View>
   );
 }
@@ -20,6 +20,7 @@ const estilos = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 50
   },
 
   titulo: {
