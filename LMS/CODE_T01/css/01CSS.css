@@ -1,0 +1,23 @@
+h3 {
+    background-color: blueviolet;
+}
+
+.uma-classe {
+    background-color: azure;
+}
+
+#um-id {
+    background-color: brown;
+}
+
+h4,h5,h6 {
+    background-color: red;
+}
+
+div p {
+    background-color: blue;
+}
+
+div > blockquote {
+    background-color: green;
+}

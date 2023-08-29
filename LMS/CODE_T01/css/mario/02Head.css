@@ -1,0 +1,316 @@
+.looks {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+div.relative_head {
+    position: relative;
+    width: 220px;
+    height: 100px;
+    left: 180px;
+    top: 50px;
+    border: 1px solid black
+}
+
+div.absolute_head11 {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    background-color: brown
+}
+
+div.absolute_head12 {
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    background-color: brown
+}
+
+div.absolute_head13 {
+    position: absolute;
+    top: 0px;
+    left: 60px;
+    background-color: brown
+}
+
+div.absolute_head14 {
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    background-color: burlywood
+}
+
+div.absolute_head15 {
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    background-color: burlywood
+}
+
+div.absolute_head16 {
+    position: absolute;
+    top: 0px;
+    left: 120px;
+    background-color: black
+}
+
+div.absolute_head17 {
+    position: absolute;
+    top: 0px;
+    left: 140px;
+    background-color: burlywood
+}
+
+div.absolute_head21 {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    background-color: brown
+}
+
+div.absolute_head22 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: burlywood
+}
+
+div.absolute_head23 {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    background-color: brown
+}
+
+div.absolute_head24 {
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    background-color: burlywood
+}
+
+div.absolute_head25 {
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    background-color: burlywood
+}
+
+div.absolute_head26 {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    background-color: burlywood
+}
+
+div.absolute_head27 {
+    position: absolute;
+    top: 20px;
+    left: 120px;
+    background-color: black
+}
+
+div.absolute_head28 {
+    position: absolute;
+    top: 20px;
+    left: 140px;
+    background-color: burlywood
+}
+
+div.absolute_head29 {
+    position: absolute;
+    top: 20px;
+    left: 160px;
+    background-color: burlywood
+}
+
+div.absolute_head210 {
+    position: absolute;
+    top: 20px;
+    left: 180px;
+    background-color: burlywood
+}
+
+div.absolute_head31 {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    background-color: brown
+}
+
+div.absolute_head32 {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    background-color: burlywood
+}
+
+div.absolute_head33 {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    background-color: brown
+}
+
+div.absolute_head34 {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    background-color: burlywood
+}
+
+div.absolute_head35 {
+    position: absolute;
+    top: 40px;
+    left: 80px;
+    background-color: burlywood
+}
+
+div.absolute_head36 {
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    background-color: burlywood
+}
+
+div.absolute_head37 {
+    position: absolute;
+    top: 40px;
+    left: 120px;
+    background-color: burlywood
+}
+
+div.absolute_head38 {
+    position: absolute;
+    top: 40px;
+    left: 140px;
+    background-color: black
+}
+
+div.absolute_head39 {
+    position: absolute;
+    top: 40px;
+    left: 160px;
+    background-color: burlywood
+}
+
+div.absolute_head310 {
+    position: absolute;
+    top: 40px;
+    left: 180px;
+    background-color: burlywood
+}
+
+div.absolute_head311 {
+    position: absolute;
+    top: 40px;
+    left: 200px;
+    background-color: burlywood
+}
+
+div.absolute_head41 {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background-color: brown
+}
+
+div.absolute_head42 {
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    background-color: burlywood
+}
+
+div.absolute_head43 {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    background-color: burlywood
+}
+
+div.absolute_head44 {
+    position: absolute;
+    top: 60px;
+    left: 80px;
+    background-color: burlywood
+}
+
+div.absolute_head45 {
+    position: absolute;
+    top: 60px;
+    left: 100px;
+    background-color: burlywood
+}
+
+div.absolute_head46 {
+    position: absolute;
+    top: 60px;
+    left: 120px;
+    background-color: black
+}
+
+div.absolute_head47 {
+    position: absolute;
+    top: 60px;
+    left: 140px;
+    background-color: black
+}
+
+div.absolute_head48 {
+    position: absolute;
+    top: 60px;
+    left: 160px;
+    background-color: black
+}
+
+div.absolute_head49 {
+    position: absolute;
+    top: 60px;
+    left: 180px;
+    background-color: black
+}
+
+div.absolute_head51 {
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    background-color: burlywood
+}
+
+div.absolute_head52 {
+    position: absolute;
+    top: 80px;
+    left: 60px;
+    background-color: burlywood
+}
+
+div.absolute_head53 {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    background-color: burlywood
+}
+
+div.absolute_head54 {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    background-color: burlywood
+}
+
+div.absolute_head55 {
+    position: absolute;
+    top: 80px;
+    left: 120px;
+    background-color: burlywood
+}
+
+div.absolute_head56 {
+    position: absolute;
+    top: 80px;
+    left: 140px;
+    background-color: burlywood
+}

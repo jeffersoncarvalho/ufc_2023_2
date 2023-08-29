@@ -1,0 +1,16 @@
+div {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.outer > div {
+    border: 1px solid orange;
+}
+
+p {
+    border-style: dotted solid dotted solid;
+}
+
+p.three {
+    background-color: red;
+}

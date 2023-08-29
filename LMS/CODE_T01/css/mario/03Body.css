@@ -1,0 +1,15 @@
+.looks {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+div.relative_body {
+    position: relative;
+    width: 240px;
+    height: 180px;
+    left: 160px;
+    top: 100px;
+    border: 1px solid black
+}

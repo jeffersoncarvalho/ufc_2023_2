@@ -5,6 +5,7 @@ import { StyleSheet, View} from 'react-native';
 //import MyCat from './components/04MyCat';
 //import Parent from './components/05Nested/05Parent';
 import State from './components/06State';
+import estilos from './css/MyCSS';
 
 export default function App() {
   return (
@@ -23,22 +24,3 @@ App ---> Parent--->
 
 */
 
-
-const estilos = StyleSheet.create({
-
-  container: {
-    flex: 1,
-    flexDirection: "column",
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 50
-  },
-
-  titulo: {
-    fontSize:50,
-    fontWeight: "bold",
-    color: "red"
-  }
-
-});
