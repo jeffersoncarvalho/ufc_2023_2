@@ -1,0 +1,18 @@
+h3 {
+    color:blueviolet;
+    margin-top: 100px;
+}
+
+.classe-externa {
+    color:chocolate
+}
+
+#meu-id{
+    font-size: larger;
+    color: blueviolet;
+}
+
+div > p {
+    font-size: small;
+    color: red;
+}

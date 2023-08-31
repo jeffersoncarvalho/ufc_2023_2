@@ -4,14 +4,14 @@ import { StyleSheet, View} from 'react-native';
 //import MyCat from './components/03MyCat';
 //import MyCat from './components/04MyCat';
 //import Parent from './components/05Nested/05Parent';
-import State from './components/06State';
-import estilos from './css/MyCSS';
+//import State from './components/06State';
+//import estilos from './css/MyCSS';
+//import MyTextInput from './components/07TextInput';
+import JuntarFrases from './components/08JuntarFrases';
 
 export default function App() {
   return (
-    <View style={estilos.container}>
-      <State />
-    </View>
+    <JuntarFrases />
   );
 }
 
