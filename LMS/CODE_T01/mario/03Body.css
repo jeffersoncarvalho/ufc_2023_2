@@ -13,3 +13,59 @@ div.relative_body {
     top: 100px;
     border: 1px solid black
 }
+
+div.absolute_body11 {
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    background-color: red
+}
+
+div.absolute_body12 {
+    position: absolute;
+    top: 0px;
+    left: 60px;
+    background-color: red
+}
+
+div.absolute_body13 {
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    background-color: blue
+}
+
+div.absolute_body14 {
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    background-color: red
+}
+
+div.absolute_body15 {
+    position: absolute;
+    top: 0px;
+    left: 120px;
+    background-color: red
+}
+
+div.absolute_body16 {
+    position: absolute;
+    top: 0px;
+    left: 140px;
+    background-color: blue
+}
+
+div.absolute_body17 {
+    position: absolute;
+    top: 0px;
+    left: 160px;
+    background-color: red
+}
+
+div.absolute_body18 {
+    position: absolute;
+    top: 0px;
+    left: 180px;
+    background-color: red
+}
