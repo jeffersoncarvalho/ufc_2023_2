@@ -1,0 +1,23 @@
+h3{
+    background-color: blue;
+    color: white;
+}
+
+.classe-b{
+    color: black;
+    background-color:#C0C0C0
+}
+
+.classe-a{
+    color: red;
+    background-color: aqua;
+}
+
+#meu-id{
+    background-color: blue;
+}
+
+div > p{
+    font-weight: bold;
+}
+

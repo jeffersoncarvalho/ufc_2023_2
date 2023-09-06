@@ -6,10 +6,11 @@ const JuntarFrases = () => {
     const [frase1,setFrase1] = useState("")
     const [frase2,setFrase2] = useState("")
     const [frase3,setFrase3] = useState("")
+    const [number, setNumber] = useState(0)
 
     return (
         <View style={estilos.view}>
-            <Text style={estilos.header}>Juntador de Frases</Text>
+            <Text style={estilos.header}>Juntar Frases</Text>
             <TextInput
                 style={estilos.input}
                 defaultValue={frase1}
@@ -24,14 +25,23 @@ const JuntarFrases = () => {
                     (textoDigitado) => setFrase2(textoDigitado)
                 }
             />
+
+            <TextInput
+                style={estilos.input}
+                keyboardType="numeric"
+                onChangeText={
+                    (textoDigitado) => setNumber(textoDigitado)
+                }
+            />
             
-            <View style={{width:300, height:100, fontSize:40, padding:30, margin: 20}}>
+            <View>
                 <Button
                     title="JUNTAR"
                     onPress={
                         ()=> {
                             console.log(frase1 + " " + frase2)
                             setFrase3(frase1 + "  " + frase2)
+                            console.log(parseInt(number) + 5)
                         }
                     }
                 />
@@ -46,10 +56,10 @@ const JuntarFrases = () => {
 
 const estilos = StyleSheet.create({
     header: {
-        fontSize:60,
+        fontSize:25,
         fontWeight:"bold",
         color:"red",
-        paddingBottom:40
+        padding:40
     },
     view: {
         flex:1,
@@ -58,16 +68,17 @@ const estilos = StyleSheet.create({
         backgroundColor: "#C0C0C0"
     },
     input: {
-        height: 100,
-        width:600,
+        height: 40,
+        width:300,
         paddingLeft: 10,
+        margin:10,
         borderColor: "black",
         borderWidth: 2,
-        fontSize: 60,
+        fontSize: 16,
         fontWeight: "bold",
     },
     frase: {
-        fontSize:80,
+        fontSize:25,
         fontWeight:"bold",
         paddingTop:40
     }

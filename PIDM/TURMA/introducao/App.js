@@ -7,11 +7,15 @@ import { StyleSheet, View} from 'react-native';
 //import State from './components/06State';
 //import estilos from './css/MyCSS';
 //import MyTextInput from './components/07TextInput';
-import JuntarFrases from './components/08JuntarFrases';
+//import JuntarFrases from './components/08JuntarFrases';
+//import Calculadora from './components/09Calculadora/09Caculadora';
+//import MyScrollView from './components/10MyScrollView';
+//import MyFlatList from './components/11MyFlatList';
+import MySectionList from './components/12SectionList';
 
 export default function App() {
   return (
-    <JuntarFrases />
+    <MySectionList />
   );
 }
 
