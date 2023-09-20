@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Estudo de Flexbox</title>
+        <title>Flexbox</title>
     </head>
     <body>
         <!--CONTAINER-->
         <div
             style="
                 display: flex;
-                flex-direction: column;
+                flex-direction: column;;
+                justify-content: flex-start;
                 align-items: flex-start;
-                flex-wrap: nowrap;
-                
-                background-color: aqua;
+
                 width: 300px;
                 height: 300px;
-                "
+                background-color: aqua;
+            "
             
         >
+            <!--ITEM A-->
             <div
                 style="
                     background-color: red;
                     flex: 1;
                 "
-            >
-            A
-            </div>
+            >A</div>
+            <!--ITEM B-->
             <div
                 style="
                     background-color: green;
-                    flex: 2;
+                    flex:2;
                 "
-            >
-            B
-            </div>
+            >B</div>
+            <!--ITEM C-->
             <div
                 style="
                     background-color: blue;
-                    flex: 3;
+                   flex: 3;
                 "
-            >
-            C
-            </div>
+            >C</div>
+            <!--ITEM D-->
+            
             
         </div>
     </body>

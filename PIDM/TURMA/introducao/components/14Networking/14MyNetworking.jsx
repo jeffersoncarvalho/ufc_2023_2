@@ -33,22 +33,22 @@ const MyNetworking = () => {
     return (
         <View style={estilos.container}>
             <Text style={estilos.header}>{title}</Text>
-            <View style={{padding:20, margin:20, backgroundColor:"red"}}>
+            <View style={estilos.description_view}>
                 <Text style={estilos.description}>{description}</Text>
             </View>
             <FlatList 
-                style={{backgroundColor:"green",width:"100%"}}
+                style={estilos.flatlist}
                 data={movies}
                 renderItem={
                     ({item}) => {
                         return (
-                            <View style={{flex:1,flexDirection:"row",padding:10,margin:10, backgroundColor: "red"}}>
-                                <View>
+                            <View style={estilos.card}>
+                                <View style={{padding:20}}>
                                     <Text style={{fontSize:25,fontWeight:"bold"}}>{item.id}</Text>
                                 </View>
-                                <View>
-                                    <Text style={{fontSize:25}}>{item.title}</Text>
-                                    <Text style={{fontSize:25}}>{item.releaseYear}</Text>
+                                <View style={estilos.movie}>
+                                    <Text style={{fontSize:20}}>{item.title}</Text>
+                                    <Text style={{fontSize:20}}>{item.releaseYear}</Text>
                                 </View>
                             </View>
                         )

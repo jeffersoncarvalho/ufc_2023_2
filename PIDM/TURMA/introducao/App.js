@@ -15,11 +15,12 @@ import State from './components/06State';
 //import MyFlexBox from './components/13Flexbox/13Flexbox__';
 //import MyFlexBox from './components/13Flexbox/13FlexboxA';
 //import MyFlexBox from './components/13Flexbox/13FlexboxB';
-import MyNetworking from './components/14Networking/14MyNetworking';
+//import MyNetworking from './components/14Networking/14MyNetworking';
+import MainNavApp from './components/15Navigation/01NavStack/MainNavApp';
 
 export default function App() {
   return (
-    <MyNetworking/>
+    <MainNavApp/>
   );
 }
 
