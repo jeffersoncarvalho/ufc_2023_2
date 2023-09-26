@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .image-overlay{
+            width: 320px;
+            height: 240px;
+            position: relative;
+        }
+
+        
+
+        .image-overlay .overlay{
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 500ms, transform 500ms;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: scale(0,0);
+        }
+
+        .image-overlay:hover .overlay{
+            opacity: 1;
+            transform: scale(1,1);
+        }
+
+        .image-overlay .overlay span{
+            display: block;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="image-overlay">
+        <img src="https://loremflickr.com/320/240" alt="">
+        <div class="overlay">
+            <span>Imagem muito legal</span>
+        </div>
+    </div> 
+</body>
+</html>

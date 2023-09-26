@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { 
+            margin: 0;
+            padding: 0;
+        }
+        .acordeon {
+            width: 400px;
+        }
+
+        .acordeon .section .titulo{
+            background-color: aqua;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .acordeon .section .conteudo-section{
+            background-color: rgb(35, 228, 228);
+            height: 0px;
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: height 1000ms;
+        }
+
+        .acordeon .section:hover .conteudo-section{
+            height: 240px;
+        }
+    </style>
+</head>
+<body>
+    <div class="acordeon">
+        <div class="section">
+            <div class="titulo">Título 1</div>
+            <div class="conteudo-section">Conteúdo 1</div>
+        </div>
+        <div class="section">
+            <div class="titulo">Título 2</div>
+            <div class="conteudo-section">Conteúdo 2</div>
+        </div>
+        <div class="section">
+            <div class="titulo">Título 3</div>
+            <div class="conteudo-section">Conteúdo 3</div>
+        </div>
+        <div class="section">
+            <div class="titulo">Título 4</div>
+            <div class="conteudo-section">Conteúdo</div>
+        </div>
+    </div>
+</body>
+</html>

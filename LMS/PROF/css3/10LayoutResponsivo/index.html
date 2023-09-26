@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .navegador{
+            background-color: aqua;
+        }
+        .link {
+            text-decoration: none;
+            display: block;
+            color: black;
+            padding: 7px;
+            text-align: center;
+        }
+        .link:hover{
+            background-color: rgb(52, 196, 196);
+        }
+        .menu-resposivo {
+            background-color: bisque;
+        }
+
+        @media screen and (min-width:600px) {
+            .menu-resposivo {
+                position: fixed;
+                top:0;
+                left:0;
+                height: 100vh;
+                width: 300px;
+            }
+            .navegador, .conteudo{
+                margin-left: 300px;
+            }
+        
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Requisitos: 
+    1. Menu superior móvel. Os botões são lado a lado na tela grande e são um embaixo do outro na pequeno.
+    2. Menu lateral. Quando for tela grande (>=992px), esse é fixo à esquerda. Quando for menor, esse menu entre o menu superior e o conteúdo.
+    -->
+    <nav class="navegador">
+        <a href="" class="link">Link 1</a>
+        <a href="" class="link">Link 2</a>
+        <a href="" class="link">Link 3</a>
+        <a href="" class="link">Link 4</a>
+    </nav>
+    <div class="menu-resposivo">
+        <a href="" class="link">Link 1</a>
+        <a href="" class="link">Link 2</a>
+        <a href="" class="link">Link 3</a>
+        <a href="" class="link">Link 4</a>
+    </div>
+    <div class="conteudo">
+        Qualquer negócio
+    </div>
+
+</body>
+</html>
