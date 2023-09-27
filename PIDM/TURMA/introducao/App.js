@@ -1,10 +1,10 @@
-import { StyleSheet, View} from 'react-native';
+//import { StyleSheet, View} from 'react-native';
 //import HelloRN from './components/01HelloRNV1';
 //import HelloRNV2 from './components/02HelloRNV2';
 //import MyCat from './components/03MyCat';
 //import MyCat from './components/04MyCat';
 //import Parent from './components/05Nested/05Parent';
-import State from './components/06State';
+//import State from './components/06State';
 //import estilos from './css/MyCSS';
 //import MyTextInput from './components/07TextInput';
 //import JuntarFrases from './components/08JuntarFrases';
@@ -17,11 +17,13 @@ import State from './components/06State';
 //import MyFlexBox from './components/13Flexbox/13FlexboxB';
 //import MyNetworking from './components/14Networking/14MyNetworking';
 //import MainNavApp from './components/15Navigation/01NavStack/MainNavApp';
-import MainScreen from './components/15NavigationAula/15NavStack/MainScreen';
+//import MainScreen from './components/15NavigationAula/15NavStack/MainScreen';
+//import PokemonApp from './components_prof/15Navigation/05Pokemon/PokemonApp';
+import PokemonApp from "./components/16Pokemon/PokemonApp";
 
 export default function App() {
   return (
-    <MainScreen/>
+    <PokemonApp/>
   );
 }
 

@@ -3,14 +3,34 @@
 
 <head>
     <style>
+
         .container {
-            margin: 50px;
-            width: 100px;
+            margin: 0px;
+            width: 50px;
             height: 50px;
             background-color: red;
-            animation-name: example00;
+            position: absolute;
+
+            animation-name: example;
             animation-duration: 2s;
             animation-iteration-count: infinite;
+           
+
+        }
+
+        .container2 {
+            margin: 0px;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+
+            animation-name: example00;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+           
 
         }
 
@@ -29,6 +49,7 @@
                 background-color: red;
                 left: 0px;
                 top: 0px;
+                
             }
 
             25% {
@@ -59,7 +80,12 @@
 </head>
 
 <body>
-    <div class="container"></div>
+    <div class="container"  >
+         
+    </div>
+    <div class="container2"  >
+         
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .envelope {
+                background-color: red;
+                width: 100px;
+                height: 70px;
+
+                position: absolute;
+                top: 100px;
+                left: 100px;
+            }
+            .envelope_top {
+                background-color: violet;
+                width: 76px;
+                height: 75px;
+
+                transform: rotate(45deg);
+                position: absolute;
+                top: 59px;
+                left: 112px;
+
+                border-top-left-radius: 10%;
+                border-bottom-left-radius: 10%;
+                border-top-right-radius: 10%;
+            }
+            .envelope_frente {
+                background-color: red;
+                width: 100px;
+                height: 40px;
+
+                position: absolute;
+                top: 120px;
+                left: 100px;
+            }
+
+            .carta {
+                background-color: antiquewhite;
+                width: 80px;
+                height: 50px;
+
+                position: absolute;
+                top: 100px;
+                left: 110px;
+
+                transition: top 0.5s;
+                transition-timing-function: ease-in-out;
+            }
+
+            .carta:hover {
+                top: 70px
+            }
+
+            .caixinha_01 {
+                background-color: red;
+                width: 20px;
+                height: 7px;
+
+                position: absolute;
+                top: 112px;
+                left: 100px;
+
+                transform: rotate(45deg);
+            }
+
+            .caixinha_02 {
+                background-color: red;
+                width: 20px;
+                height: 7px;
+
+                position: absolute;
+                top: 112px;
+                left: 180px;
+
+                transform: rotate(-45deg);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="envelope"></div>
+        
+        <div class="envelope_top"></div>
+        <div class="carta" style="display: flex; justify-content: center; align-items: center;">
+             
+            <img src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Wlademir-Araujo-Tavares1.png" width="30px"/>
+        </div>
+        <div class="envelope_frente"></div>
+        <div class="caixinha_01"></div>
+        <div class="caixinha_02"></div>
+    </body>
+</html>
