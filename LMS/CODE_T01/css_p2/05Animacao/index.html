@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {
+                margin: 10px;
+                width: 50px;
+                height: 50px;
+                background-color: red;
+
+                position: absolute;
+                top: 0px;
+                left: 0px;
+
+                animation-name: mudanca_cor;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes mudanca_cor {
+                from {
+                    background-color: red;
+                }
+                to {
+                    background-color: green;
+                }
+            }
+
+            @keyframes mudanca_localizacao {
+                0% {
+                    background-color: red;
+                    left: 0px;
+                    top: 0px;
+                }
+                25%{
+                    background-color: yellow;
+                    left: 200px;
+                    top: 0px;
+                }
+                50%{
+                    background-color: blue;
+                    left: 200px;
+                    top: 200px;
+                }
+                75%{
+                    background-color: green;
+                    left: 0px;
+                    top: 200px;
+                }
+                100%{
+                    background-color: red;
+                    left: 0px;
+                    top: 0px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container"></div>
+    </body>
+</html>
