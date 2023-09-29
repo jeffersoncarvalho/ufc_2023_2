@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                margin: 0;
+                top: 0;
+            }
+            .acordeon {
+                width: 300px;
+            }
+            .acordeon .secao .titulo_secao {
+                background-color: aqua;
+                height: 40px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .conteudo_secao {
+                background-color: beige;
+                height: 0px;
+                overflow: hidden;
+
+                transition: height 1s;
+            }
+
+            .secao:hover .conteudo_secao{
+                height: 240px;
+                background-color: red;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="acordeon">
+            <div class="secao">
+                <div class="titulo_secao">Título 1</div>
+                <div class="conteudo_secao">Conteúdo 1</div>
+            </div>
+            <div class="secao">
+                <div class="titulo_secao">Título 2</div>
+                <div class="conteudo_secao">Conteúdo 2</div>
+            </div>
+            <div class="secao">
+                <div class="titulo_secao">Título 3</div>
+                <div class="conteudo_secao">Conteúdo 3</div>
+            </div>
+            <div class="secao">
+                <div class="titulo_secao">Título 4</div>
+                <div class="conteudo_secao">Conteúdo 4</div>
+            </div>
+        </div>
+    </body>
+</html>

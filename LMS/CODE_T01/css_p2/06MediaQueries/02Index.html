@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {
+                overflow: auto;
+            }
+            #conteudo {
+                margin-left: 5px;
+            }
+            .menu_esquerdo {
+                float: none;
+                width: auto;
+            }
+            .menu {
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+            .menu_item {
+                background-color: beige;
+                border: 1px solid;
+                border-radius: 5px;
+                list-style-type: none;
+                margin: 4px;
+                padding: 4px;
+            }
+
+            @media screen and (min-width: 400px){
+                .menu_esquerdo {
+                    width: 200px;
+                    float: left;
+                }
+                #conteudo {
+                    margin-left: 215px;
+                }
+                .menu {
+                    display: block;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!--MENU LATERAL ESQUERDO/SUPERIOR-->
+            <div class="menu_esquerdo">
+                <ul class="menu">
+                    <li class="menu_item">MENU ITEM 1</li>
+                    <li class="menu_item">MENU ITEM 2</li>
+                    <li class="menu_item">MENU ITEM 3</li>
+                    <li class="menu_item">MENU ITEM 4</li>
+                </ul>
+            </div>
+            <!--CONTEÚDO-->
+            <div id="conteudo">
+                <p>
+                    The following example shows a menu that will 
+                    float to the left of the page if the viewport 
+                    is 480 pixels wide or wider (if the viewport is less than 
+                    480 pixels, the menu will be on top of the content):
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

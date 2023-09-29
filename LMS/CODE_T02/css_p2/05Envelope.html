@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .envelope {
+                background-color: red;
+                width: 100px;
+                height: 70px;
+
+                position: absolute;
+                top: 100px;
+                left: 100px;
+            }
+            .envelope_top {
+                background-color: blueviolet;
+                width: 80px;
+                height: 75px;
+
+                transform: rotate(45deg);
+                position: absolute;
+                top: 60px;
+                left: 110px;
+
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                border-bottom-left-radius: 15px;
+            }
+            .envelope_frente {
+                background-color:red;
+                width: 100px;
+                height: 55px;
+
+                position: absolute;
+                top: 115px;
+                left: 100px;
+            }
+            .carta {
+                background-color: antiquewhite;
+                width: 80px;
+                height: 70px;  
+                
+                position: absolute;
+                top: 100px;
+                left: 110px;
+
+                transition: top 1.5s;
+            }
+            .carta:hover{
+                top: 50px
+            }
+            .tirinha_esquerda {
+                background-color: red;
+                width: 15px;
+                height: 5px;
+
+                position: absolute;
+                top: 110px;
+                left: 101px;
+
+                transform: rotate(45deg);
+            }
+            .tirinha_direita {
+                background-color: red;
+                width: 15px;
+                height: 3px;
+
+                position: absolute;
+                top: 110px;
+                left: 186px;
+
+                transform: rotate(-45deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="envelope"></div>
+        <div class="envelope_top"></div>
+        <div class="carta" style="display: flex; justify-content: center;">
+            <img src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Arag%C3%A3o-113x150.png" width="50px" />
+        </div>
+        <div class="envelope_frente"></div>
+        <div class="tirinha_esquerda"></div>
+        <div class="tirinha_direita"></div>
+    </body>
+</html>

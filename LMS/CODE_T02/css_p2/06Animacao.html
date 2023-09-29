@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {
+                background-color: red;
+                width: 50px;
+                height: 50px;
+
+                position: absolute;
+                top: 0px;
+                left: 0px;
+
+                animation-name: mudar_posicao_v2;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                animation-delay: 2s;
+
+            }
+
+            @keyframes mudar_posicao {
+                from {
+                    top: 0px;
+                    left: 0px;
+                }
+                to {
+                    top: 0px;
+                    left: 200px;
+                }
+            }
+
+            @keyframes mudar_posicao_v2{
+                0%{
+                    top: 0px;
+                    left: 0px;
+                    background-color: red;
+                }
+                25%{
+                    top: 0px;
+                    left: 200px;
+                    background-color: aqua;
+                }
+                50%{
+                    top: 200px;
+                    left: 200px;
+                    background-color: black;
+                }
+                75%{
+                    top: 200px;
+                    left: 0px;
+                    background-color: blueviolet;
+                }
+                100%{
+                    top: 0px;
+                    left: 0px;
+                    background-color: red;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container"></div>
+    </body>
+</html>
