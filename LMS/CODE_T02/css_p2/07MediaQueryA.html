@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+            overflow: auto;
+        }
+
+        .conteudo {
+            margin-left: 5px;
+        }
+
+        .menu_esquerdo {
+            float: none;
+            width: auto;
+            background-color: antiquewhite;
+        }
+
+        .menu_items {
+            margin: 0;
+            padding: 0;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            list-style-type: none;
+        }
+
+        .menu_item {
+            margin: 5px;
+        }
+
+        @media screen and (min-width:500px) {
+            .menu_esquerdo {
+                width: 100px;
+                height: 640px;
+                float: left;
+            }
+            .conteudo {
+                margin-left: 105px;
+            }
+            .menu_items {
+                display: block;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu_esquerdo">
+            <ul class="menu_items">
+                <li class="menu_item">Menu Item 1</li>
+                <li class="menu_item">Menu Item 2</li>
+                <li class="menu_item">Menu Item 3</li>
+                <li class="menu_item">Menu Item 4</li>
+            </ul>
+        </div>
+        <div class="conteudo">
+            React Native is an open source framework
+            for building Android and iOS applications
+            using React and the app platform’s
+            native capabilities. With React Native,
+            you use JavaScript to access your
+            platform’s APIs as well as to describe
+            the appearance and behavior of your
+            UI using React components: bundles of
+            reusable, nestable code.
+            You can learn more about React in
+            the next section. But first, let’s
+            cover how components work in React Native.
+        </div>
+    </div>
+</body>
+
+</html>

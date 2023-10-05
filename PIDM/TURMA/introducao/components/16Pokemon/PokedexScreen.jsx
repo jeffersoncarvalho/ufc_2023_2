@@ -22,7 +22,7 @@ const PokedexScreen = ({ navigation }) => {
                     //let id = 0
                     const vetorFormatado = json.results.map(
                         ({ name, url }) => {
-                            return { id: url.split("/")[6], name, url }
+                            return { id: url.split("/")[6], name, url, key:url.split("/")[6] }
                         }
                     )//map
                     //console.log(vetorFormatado)
