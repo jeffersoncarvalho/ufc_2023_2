@@ -20,11 +20,12 @@
 //import MainScreen from './components/15NavigationAula/15NavStack/MainScreen';
 //import PokemonApp from './components_prof/15Navigation/05Pokemon/PokemonApp';
 //import PokemonApp from "./components/16Pokemon/PokemonApp";
-import MyIconButton from "./components/17IconButton/MyIconButton";
+//import MyIconButton from "./components/17IconButton/MyIconButton";
+import MySectionList from "./components/12SectionList/12SectionList";
 
 export default function App() {
   return (
-    <MyIconButton/>
+    <MySectionList/>
   );
 }
 

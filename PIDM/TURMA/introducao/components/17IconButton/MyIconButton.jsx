@@ -22,7 +22,7 @@ const MyIconButton = () => {
                 <IconButton
                     icon="medical-bag"
                     iconColor={MD3Colors.tertiary0}
-                    size={30}
+                    size={50}
                     onPress={() => console.log('Pressed')}
                     mode="contained"
                 />

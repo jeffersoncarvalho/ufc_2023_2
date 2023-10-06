@@ -29,9 +29,9 @@ const MySectionList = () => {
                 sections={dados}
                 keyExtractor={(item)=>"SDDCeredEDDeed" + item.id}
                 renderItem={
-                    ({item})=>{
+                    ({item,section})=>{
                         return (
-                            <Text style={{fontSize:25}}>{item.nome}</Text>
+                            <Text style={{fontSize:25}}>{item.nome},{section.title}</Text>
                         )
                     }
                 }
