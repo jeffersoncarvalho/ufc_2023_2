@@ -1,29 +1,29 @@
+import { PaperProvider} from "react-native-paper"
 import { NavigationContainer } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { View } from "react-native"
 
-import PokedexScreen from "./PokedexScreen"
-import PokemonModalScreen from "./PokemonModal"
+import ProvaLista from "./ProvaLista"
+import ProvaModal from "./ProvaModal"
 
 const NativeStack = createNativeStackNavigator()
 
-const PokemonApp = () => {
+const ProvaApp = () => {
     return (
-        
+        <PaperProvider>
         <NavigationContainer>
             <NativeStack.Navigator screenOptions={{headerShown:false}}>
                 {/*GRUPO DAS TELAS PRINCIPAIS*/}
                 <NativeStack.Group>
-                    <NativeStack.Screen name="Pokedex" component={PokedexScreen} />
+                    <NativeStack.Screen name="ProvaLista" component={ProvaLista} />
                 </NativeStack.Group>
                 {/*GRUPO DAS TELAS MODAIS*/}
                 <NativeStack.Group screenOptions={{ presentation: "modal" }}>
-                    <NativeStack.Screen name="PokemonModal" component={PokemonModalScreen} />
+                    <NativeStack.Screen name="ProvaModal" component={ProvaModal} />
                 </NativeStack.Group>
             </NativeStack.Navigator>
         </NavigationContainer>
-       
+        </PaperProvider>
     )
 }
 
-export default PokemonApp
+export default ProvaApp

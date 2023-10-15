@@ -21,11 +21,12 @@
 //import PokemonApp from './components_prof/15Navigation/05Pokemon/PokemonApp';
 //import PokemonApp from "./components/16Pokemon/PokemonApp";
 //import MyIconButton from "./components/17IconButton/MyIconButton";
-import MySectionList from "./components/12SectionList/12SectionList";
+//import ProvaApp from "./components_prof/16Prova/ProvaApp";
+import ProvaApp from "./components/18Prova01/ProvaApp";
 
 export default function App() {
   return (
-    <MySectionList/>
+    <ProvaApp/>
   );
 }
 

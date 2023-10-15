@@ -1,6 +1,6 @@
 import { View, Text, Button, FlatList, ScrollView, Image } from "react-native"
 import { useState, useEffect } from "react"
-import PokeButton from "./PokeButton"
+import PokemonButton from "./PokemonButton"
 
 const PokedexScreen = ({ navigation }) => {
 
@@ -48,7 +48,6 @@ const PokedexScreen = ({ navigation }) => {
                         (pokemonObj) => {
                             return (
                                 <View style={{
-                                    margin:2,
                                     marginBottom:15,
                                     padding:1,
                                     backgroundColor:"antiquewhite",
@@ -56,16 +55,17 @@ const PokedexScreen = ({ navigation }) => {
                                     width:100,
                                     borderColor:"red",
                                     borderWidth:2,
-                                    borderRadius:5
-                    
-                                }}>
+                                    borderRadius:5,
+                                }}
+                                        key={pokemonObj.key}
+                                >
                                     <Text style={{fontWeight:"bold", fontSize:11}}>{pokemonObj.name.toUpperCase()}</Text>
                                     <Image
                                         source={{uri:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonObj.id}.png`}}
                                         style={{width:60,height:60}} 
                                     />
                                     
-                                   <PokeButton 
+                                   <PokemonButton 
                                         title="Detalhes"
                                         onPress= {
                                             ()=>{
@@ -89,12 +89,12 @@ const PokedexScreen = ({ navigation }) => {
                 style={{
                     fontSize:25,
                     fontWeight:"bold",
-                    margin:10,
+                    marginTop:20,
                     marginBottom:20,
                     color:"orange"
                 }} 
             >
-                Pokedex Screen
+                Pokédex Screen
             </Text>
             {renderPokemons()}
         </View>

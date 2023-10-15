@@ -25,9 +25,9 @@ const dados = [
 const MySectionList = () => {
     return (
         <View style={estilos.container}>
-            <SectionList 
+            <SectionList
                 sections={dados}
-                keyExtractor={(item)=>"SDDCeredEDDeed" + item.id}
+                keyExtractor={(item,index)=>"SDDCeredEDDeed" + index}
                 renderItem={
                     ({item,section})=>{
                         return (
@@ -52,7 +52,8 @@ const estilos = StyleSheet.create({
         flex: 1,
         justifyContent: "flex-start",
         alignItems: "center",
-        paddingTop: 25
+        paddingTop: 50,
+        backgroundColor:"black"
     }
 })
 

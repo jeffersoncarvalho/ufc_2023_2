@@ -4,7 +4,14 @@ import { Text, StyleSheet, Pressable } from 'react-native';
 export default function PokeButton(props) {
   const { onPress, title = 'Save' } = props;
   return (
-    <Pressable style={styles.button} onPress={onPress}>
+    <Pressable style=
+      {
+        ({ pressed }) => [
+          { backgroundColor: pressed ? "lightsalmon" : "orange" }
+          ,
+          styles.button]
+      }
+      onPress={onPress}>
       <Text style={styles.text}>{title}</Text>
     </Pressable>
   );
@@ -14,12 +21,11 @@ const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 2,
+    paddingVertical: 1,
     paddingHorizontal: 10,
-    borderRadius: 5,
-    elevation: 1,
-    backgroundColor: 'orange',
-    marginBottom:5
+    marginBottom: 5,
+    borderRadius: 10,
+    borderWidth: 2,
   },
   text: {
     fontSize: 12,
