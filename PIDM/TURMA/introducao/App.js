@@ -22,20 +22,12 @@
 //import PokemonApp from "./components/16Pokemon/PokemonApp";
 //import MyIconButton from "./components/17IconButton/MyIconButton";
 //import ProvaApp from "./components_prof/16Prova/ProvaApp";
-import ProvaApp from "./components/18Prova01/ProvaApp";
+//import ProvaApp from "./components/18Prova01/ProvaApp";
+import CadastrarUsuario from "./components_prof/19CrudFirebase-prof/components/usuario/CadastrarUsuario";
 
 export default function App() {
   return (
-    <ProvaApp/>
+    <CadastrarUsuario/>
   );
 }
-
-/*
-
-                   ---> ChildA
-App ---> Parent---> 
-                   ---> ChildB
-
-
-*/
 

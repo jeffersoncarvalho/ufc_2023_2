@@ -2,6 +2,7 @@
 
 # dependencies
 node_modules/
+components_prof\19CrudFirebase-prof\firebase
 
 # Expo
 .expo/
