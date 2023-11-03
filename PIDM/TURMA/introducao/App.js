@@ -23,11 +23,13 @@
 //import MyIconButton from "./components/17IconButton/MyIconButton";
 //import ProvaApp from "./components_prof/16Prova/ProvaApp";
 //import ProvaApp from "./components/18Prova01/ProvaApp";
-import CadastrarUsuario from "./components_prof/19CrudFirebase-prof/components/usuario/CadastrarUsuario";
+//import CadastrarUsuario from "./components_prof/19CrudFirebase-prof/components/usuario/CadastrarUsuario";
+//import CadastrarUsuario from "./components/19CrudFirebase/usuario/CadastrarUsuario";
+import LoginUsuario from "./components/19CrudFirebase/usuario/LoginUsuario";
 
 export default function App() {
   return (
-    <CadastrarUsuario/>
+    <LoginUsuario/>
   );
 }
 
