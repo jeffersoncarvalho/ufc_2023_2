@@ -24,12 +24,16 @@
 //import ProvaApp from "./components_prof/16Prova/ProvaApp";
 //import ProvaApp from "./components/18Prova01/ProvaApp";
 //import CadastrarUsuario from "./components_prof/19CrudFirebase-prof/components/usuario/CadastrarUsuario";
+
 //import CadastrarUsuario from "./components/19CrudFirebase/usuario/CadastrarUsuario";
-import LoginUsuario from "./components/19CrudFirebase/usuario/LoginUsuario";
+//import LoginUsuario from "./components/19CrudFirebase/usuario/LoginUsuario";
+//import ListarEstudante from "./components/19CrudFirebase/estudante/ListarEstudante";
+//import CriarEstudante from "./components/19CrudFirebase/estudante/CriarEstudante";
+import RotasCRUD from "./components/20CrudExpo/RotasCRUD";
 
 export default function App() {
   return (
-    <LoginUsuario/>
+    <RotasCRUD/>
   );
 }
 
