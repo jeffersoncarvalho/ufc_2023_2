@@ -7,4 +7,4 @@ function mudarBackground() {
 let botao_id2 = document.getElementById("id2")
 //botao_id2.onclick = mudarBackground
 //botao_id2.onclick = () => mudarBackground()
-botao_id2.addEventListener("dblclick",mudarBackground)
+botao_id2.addEventListener("click",mudarBackground)

@@ -1,4 +1,4 @@
-import { getDocs, collection } from "firebase/firestore"
+import { getDocs, collection, addDoc } from "firebase/firestore"
 
 class AlunoService {
 
@@ -17,6 +17,16 @@ class AlunoService {
                 //acabei o laço!!
                 callback(alunos)
             }//snapshot
+        )
+        .catch(error=>console.log(error))
+    }
+
+    static criarAluno(firestore,callback,aluno) {
+        addDoc(collection(firestore,"alunos"),aluno)
+        .then(
+            (docRef)=>{
+                callback(docRef.id)
+            }
         )
         .catch(error=>console.log(error))
     }

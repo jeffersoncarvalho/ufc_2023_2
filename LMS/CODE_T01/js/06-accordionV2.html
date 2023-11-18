@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .section {
+                width: 480px;
+                text-align: center;
+            }
+            .section .title {
+                background-color: brown;
+                padding: 12px;
+                color: antiquewhite;
+                cursor: pointer;
+                user-select: none;
+            }
+            .section .content {
+                background-color: rgb(208,55,55);
+                height: 400px;
+                display: none;
+                animation-name: aparecer;
+                animation-duration: 500ms;
+            }
+            .section .content.active {
+                display: block;
+            }
+
+            @keyframes aparecer {
+                from {height: 0px;}
+                to {height: 400px;}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="accordion">
+            <div class="section">
+                <div class="title">Título</div>
+                <div class="content">Conteúdo</div>
+            </div>
+            <div class="section">
+                <div class="title">Título</div>
+                <div class="content">Conteúdo</div>
+            </div>
+            <div class="section">
+                <div class="title">Título</div>
+                <div class="content">Conteúdo</div>
+            </div>
+        </div>
+        
+        <script src="./06-accordionV2.js"></script>
+    </body>
+</html>
