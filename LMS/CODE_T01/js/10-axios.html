@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        async function getPokemon() {
+            try {
+                const response = await axios.get('https://pokeapi.co/api/v2/pokemon/ditto');
+                console.log(response.data.sprites.front_default);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        getPokemon()
+    </script>
+</body>
+
+</html>
