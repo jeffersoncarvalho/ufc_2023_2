@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .menu-overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0px;
+            overflow: hidden;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu-overlay.aparecer {
+            animation: aparecer 500ms linear;
+            width: 100%;
+        }
+        @keyframes aparecer {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        .menu-overlay.desaparecer {
+            animation: desaparecer 500ms linear;
+            width: 0%;
+        }
+        @keyframes desaparecer {
+            from {
+                width: 100%;
+            }
+            to {
+                width: 0;
+            }
+        }
+        .menu-overlay .menu a{
+            display: block;
+            text-decoration: none;
+            font-size: 36px;
+            padding: 12px;
+            color: rgb(175,175,175);
+            transition: color 500ms;
+        }
+        .menu-overlay .menu a:hover{
+             color: white;
+        }
+
+    </style>
+    <body>
+        TEXTO
+        <button id="abrir-modal">CLIQUE AQUI</button>
+        <div class="menu-overlay">
+            <div class="menu">
+                <a href="">Filmes</a>
+                <a href="">Bitcoin</a>
+                <a href="">Notícias</a>
+                <a href="">Astronomia</a>
+            </div>
+            <div class="fechar">X</div>
+        </div>
+        <script>
+            let fechar_div = document.querySelector(".fechar")
+            let botao_abrir_modal = document.querySelector("#abrir-modal")
+            let menu_overlay_class = document.querySelector(".menu-overlay")
+
+
+            const abrirMenuLateral = () => {
+                //menu_overlay_class.classList.remove("desaparecer")
+                //menu_overlay_class.classList.add("aparecer")
+                menu_overlay_class.className="menu-overlay aparecer"
+            }
+            botao_abrir_modal.addEventListener("click",abrirMenuLateral)
+
+            const fecharMenuLateral = () => {
+                //menu_overlay_class.classList.remove("aparecer")
+                //menu_overlay_class.classList.add("desaparecer")
+                menu_overlay_class.className="menu-overlay desaparecer"
+            }
+            fechar_div.addEventListener("click",fecharMenuLateral)
+
+        </script>
+    </body>
+</head>
